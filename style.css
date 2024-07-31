@@ -1,0 +1,385 @@
+/* Reset some default styles for better consistency */
+body, h1, h2, h3, p, ul, li, form, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+section::before {
+    content: "";
+    background-image: url('bgimg.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    opacity: 0.3; /* Adjust the opacity level as needed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the pseudo-element behind the content */
+}
+a {
+    text-decoration: none;
+    color:white;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: rgb(159, 252, 255);
+}
+
+header {
+    font-family: Helvetica;
+    background-color: black;
+    color: #fff;
+    padding: 20px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    top: 0;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {   
+    display: inline;
+    margin-right: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+ul {
+    margin-bottom: 10px;
+}
+
+ul li {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+/* Styling for specific sections */
+.featured-books {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-listings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-card {
+    width: calc(33.33% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.product-card p {
+    color: #777;
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Styling for forms */
+form {
+    margin-top: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+input[type="number"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Exit button style */
+.exit-button {
+    background-color: transparent;
+    color: #007bff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.exit-button:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+/* ... (previous styles) */
+
+.product-listings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create a 3-column grid layout */
+    grid-gap: 20px; /* Add spacing between product boxes */
+}
+
+.product-card {
+    height: auto;
+    width: auto;
+    background-color: #e7f2fa;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 350px;
+    width: 225px;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.product-card p {
+    color: #818181;
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.buy-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex-basis: 20%;
+}
+
+.footer-section h3 {
+    font-size: 1.2rem;
+}
+
+.footer-section p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #fff;
+}
+
+.footer-section ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer-section li {
+    margin-bottom: 8px;
+    list-style-type: none;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: none;
+    color: aqua;
+}
+
+.featured-books{
+    /* max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px; */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+/* 
+.blog-post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+
+.blog-title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.blog-meta {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.blog-content {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.read-more {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.featured-books img {
+    height: 200px;
+    width: auto;
+    align-self: left;
+}
+
+#img4{
+    float: right;
+    border-radius: 7%;
+    /* border-bottom-right-radius: 10%;
+    border-top-right-radius: 10%;
+    padding-right: 20px; */
+    /* padding-inline-end: 20px; */
+    padding: 10px 20px;
+}
+
+  
